@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Home</title> 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+    <!--Navigation Section--> 
+    <nav>
+        <div class="search-bar">
+            <label>Search:</label>
+            <input type="text" id="searchInput" onchange="displayFilteredItems()">
+        </div>
+        <div class="category-dropdown-container"> 
+            <select id="categoryDropDown" onchange="sortedByCategory()" >
+                <option value="0" selected >All</option>
+                <option value="1">Linear</option>
+                <option value="2">Tactile</option>
+                <option value="3">Clicky</option>
+            </select>
+        </div>
+        <h2>Mechanical Keyboards</h2>
+        <br>
+        <div class="open-cart-button">
+            <button onclick="openCart()"> cart </button>
+        </div>
+        <br>
+        <div class="sandwich-icon-area">
+            <p onclick="openNav()"> &#9776;</p>
+        </div>
+        
+        
+        
+    </nav>
+
+    <!--Dropdown Menu-->
+    <div id="myNav" class="overlay">
+        <p class="closebtn" onclick="closeNav()">&times;</p>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="contactUs.html">Contact Us</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="privacyPolicy.html">Privacy Policy</a>
+        </div>
+    </div>
+
+    <div id="cartOverlay" class="shopping-cart-container">
+            <h1> Shopping Cart &#128722; </h1>
+            <p class="closeShopCart" onclick="closeCart()">&times;</p>
+            <div id="cartItemsContainer">
+                <h3 id="totalPrice"> Total Price: $0.00 </h3>
+                <!-- Shopping cart items will be displayed here -->
+                <div id="cartItemsList">
+                    <table id="cartTable">
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Action</th>
+                        </tr>
+                        <!-- Cart items will be added here dynamically -->  
+                        <tbody id="cartTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+
+    <!--Script for dropdown menu-->
+    <script>
+        // Open the overlay menu
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+        }
+        // Close the overlay menu
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+    </script>
+    <script>
+        // Open the shopping cart overlay
+        function openCart() {
+            document.getElementById("cartOverlay").style.display = "block";
+        }
+        // Close the shopping cart overlay
+        function closeCart() {
+            document.getElementById("cartOverlay").style.display = "none";
+        }
+    </script>
+    <header>
+        <!--SlideShow Here-->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="Images/HyperXAlloy.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="Images/CherryG80.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="Images/DropAlt.jpg" style="width:100%">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <h4>Sort By</h4>
+            <button style="padding: 5px;" onclick="sortByPrice()">Price</button>
+            <button style="padding: 5px;" onclick="sortByTitle()">Title</button> 
+        </div>
+
+        <br>
+        <div>
+            <h2>Available Items</h2>
+            <div id="itemList"></div>
+        </div>
+    </main>
+
+    <footer class="vertical-center">
+        <p>ITDW5.130 Website Development<br>Created By Nathan Kinsey<br>This Website is for Demonstration Purposes Only</p>
+    </footer>
+    <script src="cart.js"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>

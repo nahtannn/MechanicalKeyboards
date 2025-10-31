@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>About Us</title> 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+    <!--Navigation Section--> 
+    <nav>
+        <br>
+        <h2>Mechanical Keyboards</h2>
+
+        <div class="open-cart-button">
+            <button onclick="openCart()"> cart </button>
+        </div>
+        <br>
+        <div class="sandwich-icon-area">
+            <p onclick="openNav()"> &#9776;</p>
+        </div>
+        
+        
+        
+    </nav>
+
+    <!--Dropdown Menu-->
+    <div id="myNav" class="overlay">
+        <p class="closebtn" onclick="closeNav()">&times;</p>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="contactUs.html">Contact Us</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="privacyPolicy.html">Privacy Policy</a>
+        </div>
+    </div>
+
+    <div id="cartOverlay" class="shopping-cart-container">
+            <h1> Shopping Cart &#128722; </h1>
+            <p class="closeShopCart" onclick="closeCart()">&times;</p>
+            <div id="cartItemsContainer">
+                <h3 id="totalPrice"> Total Price: $0.00 </h3>
+                <!-- Shopping cart items will be displayed here -->
+                <div id="cartItemsList">
+                    <table id="cartTable">
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Action</th>
+                        </tr>
+                        <!-- Cart items will be added here dynamically -->  
+                        <tbody id="cartTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+
+    <!--Script for dropdown menu-->
+    <script>
+        // Open the overlay menu
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+        }
+        // Close the overlay menu
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+    </script>
+    <script>
+        // Open the shopping cart overlay
+        function openCart() {
+            document.getElementById("cartOverlay").style.display = "block";
+        }
+        // Close the shopping cart overlay
+        function closeCart() {
+            document.getElementById("cartOverlay").style.display = "none";
+        }
+    </script>
+    <header>
+        <!--SlideShow Here-->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="Images/HyperXAlloy.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="Images/CherryG80.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="Images/DropAlt.jpg" style="width:100%">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="contact-main">
+            <div>
+                <h1>Located In Napier</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98545.73775106345!2d176.78631210819296!3d-39.47939647049759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d69c9d64fb1ca99%3A0x500ef6143a2e850!2sNapier!5e0!3m2!1sen!2snz!4v1760072337413!5m2!1sen!2snz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="text-box">
+                <h3>Our Mission</h3>
+                <br>
+                <p>At Mechanical Keyboards, our mission is to provide high-quality mechanical keyboards that enhance your typing experience. We are passionate about keyboards and strive to offer a diverse selection of products to cater to the unique preferences of our customers.</p>
+                <br>
+                <h3>FAQ</h3>
+                <br>
+                <h4>Q: What types of mechanical keyboards do you offer?</h4>
+                <p>A: We offer a wide range of mechanical keyboards, including various switch types, layouts, and designs to suit different needs and preferences.</p>
+                <br>
+                <h4>Q: Where are you located?</h4>
+                <p>A: We are located in Napier, New Zealand.</p>
+                <br>
+                <h4>Q: How can I contact customer support?</h4>
+                <p>A: You can reach our customer support team through the Contact Us page on our website</p>
+                <br>
+                <h4>Q: How do I place an order?</h4>
+                <p>A: To place an order, simply browse our catalog, add items to your cart, and it will appear in your shopping cart.</p>
+                <br>
+                <h4>Q: What is your privacy policy?</h4>
+                <p>A: We take your privacy seriously. Please refer to our Privacy Policy page for detailed information on how we collect, use, and protect your personal information.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="vertical-center">
+        <p>ITDW5.130 Website Development<br>Created By Nathan Kinsey<br>This Website is for Demonstration Purposes Only</p>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>

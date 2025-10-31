@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Privacy Policy</title> 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+    <!--Navigation Section--> 
+    <nav>
+        <br>
+        <h2>Mechanical Keyboards</h2>
+
+        <div class="open-cart-button">
+            <button onclick="openCart()"> cart </button>
+        </div>
+        <br>
+        <div class="sandwich-icon-area">
+            <p onclick="openNav()"> &#9776;</p>
+        </div>
+        
+        
+        
+    </nav>
+
+    <!--Dropdown Menu-->
+    <div id="myNav" class="overlay">
+        <p class="closebtn" onclick="closeNav()">&times;</p>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="contactUs.html">Contact Us</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="privacyPolicy.html">Privacy Policy</a>
+        </div>
+    </div>
+
+    <div id="cartOverlay" class="shopping-cart-container">
+            <h1> Shopping Cart &#128722; </h1>
+            <p class="closeShopCart" onclick="closeCart()">&times;</p>
+            <div id="cartItemsContainer">
+                <h3 id="totalPrice"> Total Price: $0.00 </h3>
+                <!-- Shopping cart items will be displayed here -->
+                <div id="cartItemsList">
+                    <table id="cartTable">
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Action</th>
+                        </tr>
+                        <!-- Cart items will be added here dynamically -->  
+                        <tbody id="cartTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+
+    <!--Script for dropdown menu-->
+    <script>
+        // Open the overlay menu
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+        }
+        // Close the overlay menu
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+    </script>
+    <script>
+        // Open the shopping cart overlay
+        function openCart() {
+            document.getElementById("cartOverlay").style.display = "block";
+        }
+        // Close the shopping cart overlay
+        function closeCart() {
+            document.getElementById("cartOverlay").style.display = "none";
+        }
+    </script>
+    <header>
+        <!--SlideShow Here-->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="Images/HyperXAlloy.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="Images/CherryG80.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="Images/DropAlt.jpg" style="width:100%">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text-box">
+            <h1>Privacy Policy</h1>
+            <br>
+
+            <p><strong>Last updated:</strong> 31 October 2025</p>
+            <br>
+
+            <p>At <strong>[Your Website Name]</strong>, we respect your privacy and follow the <strong>Privacy Act 2020 (NZ)</strong>.</p>
+            <br>
+
+            <h2>1. Information We Collect</h2>
+            <br>
+
+            <p>We only collect the personal information necessary to provide our services:</p>
+            <br>
+
+            <ul>
+                <li><strong>Contact details:</strong> name, email, phone number (if provided).</li>
+                <li><strong>Shopping cart information:</strong> items selected, quantity, and prices.</li>
+            </ul>
+            <br>
+
+            <h2>2. Why We Collect It</h2>
+            <br>
+
+            <p>Your information is used to:</p>
+            <br>
+
+            <ul>
+                <li>Process and complete your orders.</li>
+                <li>Contact you about your order or inquiries.</li>
+                <li>Improve our website and services.</li>
+            </ul>
+            <br>
+
+            <p>We do not collect more information than is necessary.</p>
+            <br>
+
+            <h2>3. How We Protect Your Information</h2>
+            <br>
+            <p>We take reasonable steps to keep your information safe from misuse, loss, or unauthorised access.</p>
+            <br>
+
+            <h2>4. Sharing Information</h2>
+            <br>
+            <p>We do <strong>not</strong> sell or trade your information. We may share your data with trusted third parties only to:</p>
+            <br>
+
+            <ul>
+                <li>Process payments.</li>
+                <li>Deliver your orders.</li>
+            </ul>
+            <br>
+
+            <p>These third parties must also comply with the Privacy Act 2020.</p>
+            <br>
+
+            <h2>5. Your Rights</h2>
+            <br>
+
+            <p>Under the Privacy Act 2020, you can:</p>
+            <br>
+
+            <ul>
+                <li>Access your personal information.</li>
+                <li>Request corrections if your information is inaccurate or incomplete.</li>
+            </ul>
+            <br>
+
+            <h2>6. Contact Us</h2>
+            <br>
+            <p>For questions or requests, submit a contact form on our contact us page.</p>
+        </div>
+        <div class="text-box">
+            <h2>Statement of Authenticity</h2>
+            <p>i confirm that:</p>
+            <ul>
+                <li>This website is my original work.</li>
+                <li>I have not copied any content from other sources unless explicitly stated.</li>
+                <li>No part of this website has been submitted for assessment in any other course.</li>
+                <li>I have acknowledged all sources used in the creation of this website.</li>
+            </ul>
+            <br>
+            <h2>References</h2>
+            <p>Images downloaded from:</p>
+            <p> <a href="https://commons.wikimedia.org/wiki/Main_Page">Wikipedia Commons</a> </p>
+            <p> <a href="https://www.cherry.de">Cherry</a> </p>
+            <p><a href="https://www.drop.com">Drop</a></p>
+            <p><a href="https://www.hyperxgaming.com">HyperX</a></p>
+
+        </div>
+    </main>
+
+    <footer class="vertical-center">
+        <p>ITDW5.130 Website Development<br>Created By Nathan Kinsey<br>This Website is for Demonstration Purposes Only</p>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>
